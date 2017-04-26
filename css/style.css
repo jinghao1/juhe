@@ -1,0 +1,81 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,dl,dt,dd,b,button,input,select,textarea{padding:0;margin:0;}
+button,input,select,textarea{vertical-align:middle}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:12px;}
+li{list-style:none;float:left;}
+fieldset,img{border:none;}
+a{color:#333;text-decoration:none;-webkit-transition: all 0.18s ease-out;-moz-transition: all 0.18s ease-out;-ms-transition: all 0.18s ease-out;-o-transition: all 0.18s ease-out;transition: all 0.18s ease-out;}
+a:hover{color:#0992cb;/*text-decoration:underline;*/cursor: pointer}
+body{background:#f4f4f4/* url(img/bj.jpg) repeat*/;color:#626262;font-size:12px;font-family: 'Microsoft YaHei',Tahoma,Arial; word-break:break-all; }
+.clear{clear:both;}
+.fleft{ float:left;}
+.fright{ float:right;}
+select::-ms-expand { display: none; } 
+/*.wrapper{margin: 0 auto;width:1160px;}*/
+.header{background: #fff;width:100%;min-width: 1200px;}
+.searchCont{width:1200px;overflow: hidden;margin:0 auto;height:85px}
+.searchCont h1{margin-top:19px;}
+
+/* 搜索框-去掉默认样式，设置新的样式 */
+.selectStyle{ margin-right:5px;border:1px solid #e5e5e5;margin-top:18px;float:left;overflow:hidden;height:46px;width:216px; border-radius:4px;/*background-size:auto 80%;*/line-height:2;position:relative;z-index:1;}
+.selectStyle:after{position:absolute;z-index:1;top:50%;right:12px;margin-top:-3.5px;display:block;width:50px;height:9px;background:url(../images/jt01.png) right center no-repeat;/*width:0;height:0;border-style:solid;border-width:8px 8px 0 8px;border-color:#e5e5e5 transparent transparent transparent;*/ content:"";}
+.selectStyle:hover:after{position:absolute;z-index:1;top:50%;right:12px;margin-top:-3.5px;display:block;width:50px;height:9px;background:url(../images/jt02.png) right center no-repeat;/*width:0;height:0;border-style:solid;border-width:8px 8px 0 8px;border-color:#e5e5e5 transparent transparent transparent;*/ content:"";}
+.selectStyle:hover{border:1px solid #ccc;}
+.select{float:left;color:#ddd; padding-left:35px;width:100%; height:100%;box-sizing:border-box;background:none;border:none;/*border:1px solid #e5e5e5;*/outline:none; appearance:none;-moz-appearance:none;-webkit-appearance:none;line-height:inherit;  cursor:pointer; font-size:14px; position:relative;z-index:3;}
+.select:hover{color:#b1b4b3;}
+.select option{ color:#444444; font-size:14px;outline: none;display: inline-block;line-height:50px; }
+/*搜索按钮*/
+.btn{border:none;cursor: pointer; outline: none;width:100px;height:48px; background: #f6a623;color:#fff;font-size:16px;margin-top:18px;float:right;border-radius:4px;}
+.btn:hover{background:#f8bf00;}
+.bgImg{position:relative;background:url(../images/bg.png) no-repeat center center;height:160px;width:100%; min-width: 1200px; }
+.bgCont{width:1200px; margin:0 auto; overflow: hidden}
+.bgCont h2{ text-align: center;color:#fff;font-size: 32px;margin-top:46px; }
+.nav{font-size:18px; /*margin-top:17px;line-height:50px;*/position:absolute;bottom:4px;line-height:50px;height:50px;}
+.nav a{margin:0 38px;color:#919bb5;float:left;}
+.nav a:hover{border-bottom:4px solid #f6a623;color:#fff;}
+.nav a.on{border-bottom:4px solid #f6a623;color:#fff;}
+/*加载瀑布流*/
+#container{position:relative;width:1200px;margin:0 auto 25px;padding-bottom: 10px;	}
+.grid{
+	width:218px;
+	min-height:100px;
+	/*padding: 0 0 15px 0;*/
+	background:#fff;
+	margin:8px;
+	font-size:12px;
+	float:left;
+	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	
+	-webkit-transition: top .5s ease, left .5s ease;
+	-moz-transition: top .5s ease, left .5s ease;
+	-o-transition: top .5s ease, left .5s ease;
+	-ms-transition: top .5s ease, left .5s ease;
+}
+.grid strong {border-bottom:1px solid #ccc;margin:10px 0;display:block;padding:0 0 5px;font-size:17px;}
+.grid .meta{text-align:left;color:#000;/*font-style:italic;*/;padding:10px 10px;font-size:16px;}
+.grid .meta a:hover{text-decoration: underline;cursor: pointer}
+.grid .imgholder a{display: block;position:relative; background: #333}
+.grid .imgholder a img{max-width:100%;background:#ccc;display:block;}
+
+@media screen and (max-width : 1240px) {
+	body{
+		overflow:auto;
+	}
+}
+@media screen and (max-width : 900px) {
+	#backlinks{
+		float:none;
+		clear:both;
+	}
+	#backlinks a{
+		display:inline-block;
+		padding-right:20px;
+	}
+}
+/*.imgholder a img{
+	background-color:rgba(255,255,255,.1)
+}*/
+.ewm{ margin:10px auto;text-align: center }
+.ewm img{width:120px; }

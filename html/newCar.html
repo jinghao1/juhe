@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>专题汇总页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" >
+<script src="../js/jquery.min.js"></script>
+<script src="../js/blocksit.min.js"></script>
+<script src="../js/xyAuto.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 4,
+			offsetX: 20,
+			offsetY: 15,
+			blockElement: '.grid'
+		});
+	});	
+	//window resize
+	var currentWidth = 1200;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth < 660) {
+			conWidth = 440;
+			col = 2
+		} else if(winWidth < 880) {
+			conWidth = 660;
+			col = 2
+		} else if(winWidth < 1200) {
+			conWidth = 880;
+			col = 3;
+		} else {
+			conWidth = 1200;
+			col = 4;
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 8,
+				offsetY: 8
+			});
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="searchCont">
+			<h1 class="fleft"><img src="../images/icon.png"></h1>
+			<div class="fright">
+				<div class="selectStyle">
+					<select class="select" name="fctbox" onchange="ChangeBrand()">
+                    	<option selected="selected" value="0">选择品牌</option>
+               			<option>东风标致</option>
+               			<option>宝沃</option>
+               			<option>上汽荣威</option>
+               		</select>
+				</div>
+				<div class="selectStyle">
+					<select class="select">
+					  	<option selected="selected" value="0">请选择</option>
+					</select>
+				</div>
+				<button class="btn">搜索专题</button>
+			</div>
+		</div>
+		<div class="bgImg">
+			<div class="bgCont">
+				<h2>商务运营部专题汇总</h2>
+				<div class="nav fleft">
+					<a class="on">新车上市</a>
+					<a href="act.html">厂商活动</a>
+					<a href="guide.html">车型导购</a>
+					<a href="h5.html">H5专栏</a>
+					<a href="mobile.html">手机专题</a>
+					<a>游戏互动</a>
+					<!-- <a>其他类别</a> -->
+					<a>优秀案例</a>
+					<a>竞品案例</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<!-- 宝沃Bx5 -->
+		<div class="grid">
+			<div class="imgholder">
+				<a href="http://xy.qichedaquan.com/201703/borgwardbx5/"><img src="../images/pic02.jpg" /></a>
+			</div>
+			<div class="meta"><a href="http://xy.qichedaquan.com/201703/borgwardbx5/"><b>[新车上市]</b>宝沃BX5</a></div>
+		</div>
+		<!-- 上汽荣威 -->
+		<div class="grid">
+			<div class="imgholder">
+				<a href="http://xy.qichedaquan.com/201703/roewei6/"><img src="../images/pic03.jpg" /></a>
+			</div>
+			<div class="meta"><a href="http://xy.qichedaquan.com/201703/roewei6/"><b>[新车上市]</b>上汽荣威</a></div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
